@@ -1,4 +1,3 @@
-tfsexpress.standard
-===================
+# Chocolatey Package for Team Foundation Server
 
-A Chocolatey package for installing Team Foundation Server and configuring it.
+If you are interested in contributing to this project, please contact [Ian Buchanan](mailto:ian.buchanan@versionone.com).

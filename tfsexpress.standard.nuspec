@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>tfsexpress.standard</id>
+    <version>1.0.0</version>
+    <authors>versionone</authors>
+    <owners>versionone</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Visual Studio Team Foundation Server Express 2012 configured on standard type.</description>
+  </metadata>
+</package>
