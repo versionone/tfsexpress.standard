@@ -1,12 +1,4 @@
 try {
-
-	$iisVersion = (get-itemproperty HKLM:\SOFTWARE\Microsoft\InetStp\ -erroraction silentlycontinue | select MajorVersion).MajorVersion
-
-	If($iisVersion -lt 6){
-		Write-Host "IIS is not installed and it's required"
-		Return
-	}
-	
 	$anySqlServer = (get-itemproperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server' -erroraction silentlycontinue).InstalledInstances.Count
 	if ($anySqlServer -eq $null)
 	{
@@ -22,6 +14,13 @@ try {
 
 	Write-Host "Configuring TFS standard" do
 	& $path unattend /configure /type:standard
+
+	$iisVersion = (get-itemproperty HKLM:\SOFTWARE\Microsoft\InetStp\ -erroraction silentlycontinue | select MajorVersion).MajorVersion
+
+	If($iisVersion -lt 6){
+		Write-Host "IIS is not installed and it's required"
+		Return
+	}
 
     if ($lastExitCode -and ($lastExitCode -ne 0)) { throw "Install MS TFS Express failed." }    
 } catch { 
