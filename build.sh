@@ -30,8 +30,6 @@ else
 fi
 source ../build-tools/common.sh
 
-MYGET_API_KEY="$1"
-
 PKGID="tfsexpress.standard"
 NUSPEC="$PKGID.nuspec"
 CHOC_SOURCE="http://chocolatey.org/"
@@ -60,5 +58,5 @@ cat > "$NUSPEC" <<EOF
 EOF
 
 $WORKSPACE/.nuget/nuget.exe pack "$NUSPEC" 
-$WORKSPACE/.nuget/nuget.exe setApiKey "$MYGET_API_KEY" -Source "$CHOC_SOURCE"
+$WORKSPACE/.nuget/nuget.exe setApiKey "$CHOC_API_KEY" -Source "$CHOC_SOURCE"
 $WORKSPACE/.nuget/nuget.exe push "$NUPKG" -Source "$CHOC_SOURCE"
