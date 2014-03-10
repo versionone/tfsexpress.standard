@@ -40,11 +40,11 @@ cat > "$NUSPEC" <<EOF
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>$PKGID</id>
-    <title>TFS Express 2012 standard type installation</title>
+    <title>TFS Express 2013 standard type installation</title>
     <version>$VERSION_NUMBER.$BUILD_NUMBER</version>
     <authors>$ORGANIZATION_NAME</authors>
     <owners>$ORGANIZATION_NAME</owners>
-    <summary>TFS Express 2012 standard type installation</summary>
+    <summary>TFS Express 2013 standard type installation</summary>
     <description>Installs TFS Express using the standard type, and validates that IIS and SQL server are installed.</description>
     <projectUrl>$GITHUB_WEB_URL</projectUrl>
     <tags>TFS Visual Studio  Express Standard</tags>
